@@ -1,0 +1,4 @@
+---
+title: Distribución
+---
+Lorem ipsum

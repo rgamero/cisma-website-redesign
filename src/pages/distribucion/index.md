@@ -1,4 +1,4 @@
 ---
 title: Distribución
 ---
-Lorem ipsum
+Lorem ipsum distribucion test

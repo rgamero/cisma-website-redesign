@@ -31,7 +31,6 @@ const BookItem = ({ data }) => {
         isbn={book.frontmatter.isbn}
         price={book.frontmatter.price}
         edition={book.frontmatter.edition}
-        relatedContent={book.frontmatter.related_content}
       />
     </Layout>
   );

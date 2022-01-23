@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Content from '../../components/Content';
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage';
 
-export const BookItemTemplate = ({
+const BookItemTemplate = ({
   content,
   contentComponent,
   title,
@@ -59,3 +59,5 @@ BookItemTemplate.propTypes = {
   edition: PropTypes.string.isRequired,
   relatedContent: PropTypes.string.isRequired,
 };
+
+export default BookItemTemplate;

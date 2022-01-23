@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import BlogRoll from '../../components/BlogRoll';
 
-const BlogIndexPage = () => (
+const DistributionIndexPage = () => (
   <Layout>
     <div
       className="full-width-image-container margin-top-0"
@@ -20,7 +20,7 @@ const BlogIndexPage = () => (
           padding: '1rem',
         }}
       >
-        Latest Stories
+        Distribución
       </h1>
     </div>
     <section className="section">
@@ -33,4 +33,4 @@ const BlogIndexPage = () => (
   </Layout>
 );
 
-export default BlogIndexPage;
+export default DistributionIndexPage;

@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 
-export const BooksPageTemplate = ({ title, content, contentComponent }) => {
+export const BookPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -25,7 +25,7 @@ export const BooksPageTemplate = ({ title, content, contentComponent }) => {
   );
 };
 
-BooksPageTemplate.propTypes = {
+BookPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   contentComponent: PropTypes.func.isRequired,
@@ -36,7 +36,7 @@ const DistributionPage = ({ data }) => {
 
   return (
     <Layout>
-      <BooksPageTemplate
+      <BookPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.body}
@@ -51,7 +51,7 @@ DistributionPage.propTypes = {
 
 export default DistributionPage;
 
-export const BooksPageQuery = graphql`
+export const bookPageQuery = graphql`
   query BooksPage($id: String!) {
     mdx(id: { eq: $id }) {
       body

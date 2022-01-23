@@ -16,9 +16,9 @@ slug:
   clean_accents: true
   sanitize_replacement: '-'
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'src/pages/blog'
+  - name: 'post'
+    label: 'Post'
+    folder: 'src/content/blog/posts'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
@@ -38,7 +38,7 @@ collections:
 
   - name: 'books'
     label: 'Libros'
-    folder: 'src/pages/books'
+    folder: 'src/content/books'
     create: true
     slug: '{{title}}'
     fields:
@@ -46,7 +46,7 @@ collections:
           label: 'Template Key',
           name: 'templateKey',
           widget: 'hidden',
-          default: 'books-page',
+          default: 'book-item',
         }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
@@ -67,7 +67,7 @@ collections:
 
   - name: 'distributors'
     label: 'Distribuidoras'
-    folder: 'src/pages/distribucion'
+    folder: 'src/content/distributors'
     create: true
     slug: '{{title}}'
     fields:
@@ -75,7 +75,7 @@ collections:
           label: 'Template Key',
           name: 'templateKey',
           widget: 'hidden',
-          default: 'distribution-page',
+          default: 'distributor-item',
         }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Address', name: 'description', widget: 'text' }
@@ -170,18 +170,6 @@ collections:
                   },
                 ],
             }
-      - file: 'src/content/distribucion/index.md'
-        label: 'Distribución'
-        name: 'distribucion'
-        fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'distribution-page',
-            }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
       - file: 'src/content/products/index.md'
         label: 'Products Page'
         name: 'products'

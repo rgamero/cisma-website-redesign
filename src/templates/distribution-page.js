@@ -24,3 +24,14 @@ DistributionPage.propTypes = {
 };
 
 export default DistributionPage;
+
+export const distributionPageQuery = graphql`
+  query DistributionPage($id: String!) {
+    mdx(id: { eq: $id }) {
+      body
+      frontmatter {
+        title
+      }
+    }
+  }
+`;

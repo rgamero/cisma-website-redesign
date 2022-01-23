@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
 import Content from '../../components/Content';
 
 const DistributionPageTemplate = ({ title, content, contentComponent }) => {
@@ -31,14 +30,3 @@ DistributionPageTemplate.propTypes = {
 };
 
 export default DistributionPageTemplate;
-
-export const distributionPageQuery = graphql`
-  query DistributionPage($id: String!) {
-    mdx(id: { eq: $id }) {
-      body
-      frontmatter {
-        title
-      }
-    }
-  }
-`;

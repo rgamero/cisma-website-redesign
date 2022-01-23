@@ -1,38 +1,40 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React from 'react';
+import { Link } from 'gatsby';
+import github from '../img/github-icon.svg';
+import logo from '../img/logo.svg';
 
 const Navbar = class extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       active: false,
       navBarActiveClass: '',
-    }
+    };
   }
 
   toggleHamburger = () => {
+    const { active } = this.state;
     // toggle the active boolean in the state
     this.setState(
       {
-        active: !this.state.active,
+        active: !active,
       },
       // after state has been updated,
       () => {
         // set the class in state for the navbar accordingly
-        this.state.active
+        active
           ? this.setState({
               navBarActiveClass: 'is-active',
             })
           : this.setState({
               navBarActiveClass: '',
-            })
+            });
       }
-    )
-  }
+    );
+  };
 
   render() {
+    const { navBarActiveClass } = this.state;
     return (
       <nav
         className="navbar is-transparent"
@@ -46,25 +48,20 @@ const Navbar = class extends React.Component {
             </Link>
             {/* Hamburger menu */}
             <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+              className={`navbar-burger burger ${navBarActiveClass}`}
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
+              aria-hidden="true"
             >
               <span />
               <span />
               <span />
             </div>
           </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
+          <div id="navMenu" className={`navbar-menu ${navBarActiveClass}`}>
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
+              <Link className="navbar-item" to="/distribucion">
+                Distribución
               </Link>
               <Link className="navbar-item" to="/blog">
                 Blog
@@ -72,8 +69,8 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/contact">
                 Contact
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
+              <Link className="navbar-item" to="/products">
+                Products
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
@@ -91,8 +88,8 @@ const Navbar = class extends React.Component {
           </div>
         </div>
       </nav>
-    )
+    );
   }
-}
+};
 
-export default Navbar
+export default Navbar;

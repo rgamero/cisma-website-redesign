@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
-import BlogPostTemplate from './components/BlogPageTemplate';
+import BlogPostTemplate from './components/BlogPostTemplate';
 import Layout from '../components/Layout';
 import { HTMLContent } from '../components/Content';
 

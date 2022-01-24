@@ -17,10 +17,10 @@ slug:
   sanitize_replacement: '-'
 collections:
   - name: 'post'
-    label: 'Post'
+    label: 'Artículos'
     folder: 'src/content/blog/posts'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     fields:
       - {
           label: 'Template Key',
@@ -28,13 +28,18 @@ collections:
           widget: 'hidden',
           default: 'blog-post',
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Featured Post', name: 'featuredpost', widget: 'boolean' }
-      - { label: 'Featured Image', name: 'featuredimage', widget: image }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Título', name: 'title', widget: 'string' }
+      - { label: 'Fecha de publicación', name: 'date', widget: 'datetime' }
+      - { label: 'Descripción', name: 'description', widget: 'text' }
+      - {
+          label: 'Artículo favorito',
+          name: 'featuredpost',
+          widget: 'boolean',
+          required: false,
+        }
+      - { label: 'Imagen', name: 'featuredimage', widget: image }
+      - { label: 'Cuerpo', name: 'body', widget: 'markdown' }
+      - { label: 'Etiquetas', name: 'tags', widget: 'list' }
 
   - name: 'books'
     label: 'Libros'
@@ -48,25 +53,26 @@ collections:
           widget: 'hidden',
           default: 'book-item',
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Featured Image', name: 'featuredimage', widget: image }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Size', name: 'size', widget: 'string' }
-      - { label: 'Pages', name: 'pages', widget: 'string' }
-      - { label: 'Weight', name: 'weight', widget: 'string' }
-      - { label: 'ISBN', name: 'isbn', widget: 'string' }
-      - { label: 'Edition', name: 'edition', widget: 'string' }
-      - { label: 'Price', name: 'price', widget: 'string' }
+      - { label: 'Título', name: 'title', widget: 'string' }
+      - { label: 'Fecha de publicación', name: 'date', widget: 'datetime' }
+      - { label: 'Descripción', name: 'description', widget: 'text' }
+      - { label: 'Imagen', name: 'featuredimage', widget: image }
+      - { label: 'Cuerpo', name: 'body', widget: 'markdown' }
+      - { label: 'Tamaño', name: 'size', widget: 'string' }
+      - { label: 'Páginas', name: 'pages', widget: 'string' }
+      - { label: 'Peso', name: 'weight', widget: 'string' }
+      - { label: 'ISBN', name: 'isbn', widget: 'string', required: false }
+      - { label: 'Edición', name: 'edition', widget: 'string' }
+      - { label: 'Precio', name: 'price', widget: 'string' }
       - {
-          label: 'Related Content',
+          label: 'Contenido relativo',
           name: 'related-content',
           widget: 'markdown',
+          required: false,
         }
 
   - name: 'content'
-    label: 'Pages'
+    label: 'Páginas'
     delete: false
     files:
       - file: 'src/content/index.md'

@@ -13,12 +13,8 @@ isbn: 978-84-945635-0-8
 edition: 1ª ed. mayo 2016
 price: "PVP: 10 €"
 related-content: >-
-  [](http://www.somosmalasana.com/china-c-cabrerizo/)[\[Audio] Presentación de
-  «La ciudad negocio» en la librería Traficantes de
-  Sueños](https://soundcloud.com/traficantesdesue-os/la-ciudad-negocio-turismo-y-movilizacion-social-en-pugna)
-
-
-  [Reseña en blogURBS «Espacios de resistencia en la ciudad negocio»](http://www2.ual.es/RedURBS/BlogURBS/espacios-de-resistencia-en-la-ciudad-negocio-una-resena-a-la-ultima-publicacion-de-cisma-editorial/)
+  [Reseña en blogURBS «Espacios de resistencia en la ciudad
+  negocio»](http://www2.ual.es/RedURBS/BlogURBS/espacios-de-resistencia-en-la-ciudad-negocio-una-resena-a-la-ultima-publicacion-de-cisma-editorial/)
 
 
   [«El turismo es uno de los grandes éxitos del capitalismo». Entrevista a China C. Cabrerizo en el periódico Somos Malasaña](http://www.somosmalasana.com/china-c-cabrerizo/)

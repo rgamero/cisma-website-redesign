@@ -11,6 +11,7 @@ const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  relatedContent,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -24,7 +25,13 @@ const BlogPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
-            <PostContent content={content} />
+            <PostContent content={content} className="contenido" />
+            {relatedContent && (
+              <Content
+                content={relatedContent}
+                className="contenido-relativo"
+              />
+            )}
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
@@ -44,12 +51,17 @@ const BlogPostTemplate = ({
   );
 };
 
+BlogPostTemplate.defaultProps = {
+  relatedContent: undefined,
+};
+
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func.isRequired,
   description: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   helmet: PropTypes.object.isRequired,
+  relatedContent: PropTypes.node,
 };
 
 export default BlogPostTemplate;

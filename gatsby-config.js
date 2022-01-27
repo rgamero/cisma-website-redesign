@@ -54,6 +54,19 @@ module.exports = {
         extensions: [`.md`, `.mdx`],
         gatsbyRemarkPlugins: [
           {
+            resolve: 'gatsby-remark-embed-video',
+            options: {
+              width: 800,
+              containerClass: 'embedVideo-container', // Optional: Custom CSS class for iframe container, for multiple classes separate them by space
+            },
+          },
+          {
+            resolve: 'gatsby-remark-embed-soundcloud',
+            options: {
+              height: 150, // default is 300
+            },
+          },
+          {
             resolve: 'gatsby-remark-relative-images',
             options: {},
           },
@@ -72,9 +85,11 @@ module.exports = {
               destinationDir: 'static',
             },
           },
+          'gatsby-remark-responsive-iframe',
         ],
       },
     },
+    'gatsby-plugin-mdx-frontmatter',
     {
       resolve: `gatsby-plugin-typography`,
       options: {

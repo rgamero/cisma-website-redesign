@@ -4,8 +4,11 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 import React from 'react';
+import { MDXProvider } from '@mdx-js/react';
 import AppProvider from './src/context';
 
 export const wrapRootElement = ({ element }) => (
-  <AppProvider>{element}</AppProvider>
+  <MDXProvider>
+    <AppProvider>{element}</AppProvider>
+  </MDXProvider>
 );

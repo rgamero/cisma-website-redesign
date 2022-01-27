@@ -39,7 +39,12 @@ collections:
         }
       - { label: 'Imagen', name: 'featuredimage', widget: image }
       - { label: 'Cuerpo', name: 'body', widget: 'markdown' }
-      - { label: 'Etiquetas', name: 'tags', widget: 'list' }
+      - {
+          label: 'Contenido relativo',
+          name: 'related_content',
+          widget: 'markdown',
+          required: false,
+        }
 
   - name: 'books'
     label: 'Libros'
@@ -66,7 +71,7 @@ collections:
       - { label: 'Precio', name: 'price', widget: 'string' }
       - {
           label: 'Contenido relativo',
-          name: 'related-content',
+          name: 'related_content',
           widget: 'markdown',
           required: false,
         }

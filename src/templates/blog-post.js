@@ -26,6 +26,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        relatedContent={post.frontmatter.related_content}
       />
     </Layout>
   );
@@ -48,6 +49,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        related_content
         tags
       }
     }

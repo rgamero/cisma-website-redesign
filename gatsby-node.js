@@ -86,3 +86,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     });
   }
 };
+
+exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
+  createTypes(`
+    type Mdx implements Node {
+      frontmatter: MdxFrontmatter
+    }
+
+    type MdxFrontmatter {
+      related_content: String @mdx
+    }
+  `);
+};

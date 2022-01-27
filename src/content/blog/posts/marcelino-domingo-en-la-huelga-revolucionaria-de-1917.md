@@ -21,6 +21,8 @@ related_content: >-
 
 Nacido en Tarragona el 26 de abril de 1884, maestro en 1903, cuando ingresó en el Partido Federal, ofrece una trayectoria política errática, siempre dentro de la izquierda, hasta fundar el 3 de abril de 1934 Izquierda Republicana, con Manuel Azaña y Santiago Casares Quiroga. Al permitir Esquerra Republicana de Catalunya la doble militancia, formó parte de su Directorio. Fue diputado por Tortosa entre 1914 y 1923, cuando el general Primo dio un golpe de Estado auspiciado por el rey Alfonso XIII, que implicó la suspensión de la Constitución y el cierre de las Cortes secuestradas. Con la proclamación de la República en 1931 volvió a ser elegido diputado, lo mismo que en 1936.
 
+https://soundcloud.com/traficantesdesue-os/salud-mental
+
 Colaboró asiduamente en diarios y revistas, además de dirigir algunos medios como *El Pueblo*, de Tortosa, en 1909; *La Publicidad*, de Barcelona, en 1915, y *La Lucha* también en Barcelona en 1916. Sufrió numerosos procesos judiciales por sus escritos: él mismo decía en su libro memorial *En la calle y en la cárcel* que al ser detenido en 1917 se instruían contra él cerca de trescientos procesos, por su campaña contra el rey y la guerra en Marruecos. Su artículo «Soldados», publicado en la primera plana de *La Lucha* el miércoles 20 junio 1917, e impreso como hoja volante con una tirada incalculable, distribuido clandestinamente en los cuarteles, motivó su detención.
 
 Ese año 1917 queda registrado con letras mayúsculas en la historia, por haber triunfado la Revolución soviética, que marca el cambio de una era histórica, al poner fin a la Edad Contemporánea iniciada en 1789 con la Revolución francesa. En España también se vivieron sucesos revolucionarios, aunque de menor trascendencia.

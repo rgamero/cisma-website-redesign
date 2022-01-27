@@ -12,6 +12,9 @@ related_content: >-
   Y el pueblo se sentía justamente indignado con la situación social del reino. Al empezar julio de 1917 las Cortes se hallaban cerradas, suspendidas las teóricas garantías constitucionales, y vigente una férrea censura de prensa. El jueves día 5 se reunió en el Ayuntamiento de Barcelona una asamblea de parlamentarios catalanes, diputados y senadores, que aprobó exigir al Gobierno de Madrid la inmediata convocatoria de Cortes Constituyentes. De no aceptarlo se celebraría una asamblea extraordinaria el jueves 19.
 
 
+  https://soundcloud.com/traficantesdesue-os/salud-mental
+
+
   [El Gobierno del presidente Dato](http://cismaeditorial.es/) rechazó la propuesta, y advirtió que de celebrarse la reunión el día 19 sería un acto sedicioso castigado en el Código Penal. Sin miedo a la amenaza, ese día trataron de entrar en el Ayuntamiento 46 parlamentarios presentes, pero la Guardia Civil se lo impidió y les obligó a marcharse. Al día siguiente el pleno del Ayuntamiento y la Diputación elevaron sendas protestas por la suspensión del acto, pero al comenzar el día 19 una huelga de ferroviarios y tranvías eléctricos en Valencia, el tema de la Asamblea quedó pospuesto.
 ---
 ## Catalanista y republicano

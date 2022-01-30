@@ -5,6 +5,16 @@ distribuitors:
     image: /img/traficantes.png
     name: Traficantes de Sueños
     address: C/ Duque de Alba, 13. 28012, Madrid Tlf. 915320928
+title: Distribución
+distributors:
+  - url: https://www.traficantes.net/
+    image: /img/traficantes.png
+    name: Traficantes de Sueños
+    address: C/ Duque de Alba, 13. 28012, Madrid Tlf. 915320928
+  - image: https://www.viruseditorial.net/images/virus_t.png
+    url: https://www.viruseditorial.net/
+    name: "Virus "
+    address: "C⁄ Junta de Comerç, 18 bajos 08001 Barcelona. Tlf: 93 441 38 14"
 related_content: >-
   ## Envíos por correo
 

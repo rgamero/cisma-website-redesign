@@ -17,6 +17,7 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        carouselLinks={frontmatter.carousel_links}
       />
     </Layout>
   );
@@ -60,6 +61,16 @@ export const pageQuery = graphql`
           }
           heading
           description
+        }
+        carousel_links {
+          url
+          image {
+            childImageSharp {
+              gatsbyImageData(layout: FIXED)
+            }
+          }
+          title
+          subtitle
         }
       }
     }

@@ -12,6 +12,8 @@ const YouTubeVideo = ({ videoSrcURL, videoTitle }) => {
     <div className="video">
       <iframe
         src={`https://www.youtube.com/embed/${getVideoID(videoSrcURL)}`}
+        width="560"
+        height="315"
         title={videoTitle}
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         frameBorder="0"

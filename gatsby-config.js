@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 module.exports = {
   siteMetadata: {
     title: 'Cisma Editorial',
@@ -10,6 +11,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
+        implementation: require('node-sass'),
         sassOptions: {
           indentedSyntax: true,
         },
@@ -54,13 +56,6 @@ module.exports = {
         extensions: [`.md`, `.mdx`],
         gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-embed-video',
-            options: {
-              width: 800,
-              containerClass: 'embedVideo-container', // Optional: Custom CSS class for iframe container, for multiple classes separate them by space
-            },
-          },
-          {
             resolve: 'gatsby-remark-embed-soundcloud',
             options: {
               height: 150, // default is 300
@@ -85,7 +80,6 @@ module.exports = {
               destinationDir: 'static',
             },
           },
-          'gatsby-remark-responsive-iframe',
         ],
       },
     },
@@ -112,7 +106,7 @@ module.exports = {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
-        purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
+        purgeOnly: ['/all.sass', '/layout.scss'], // applies purging only on the layout scss file
       },
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array

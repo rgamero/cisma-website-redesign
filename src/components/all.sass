@@ -122,9 +122,31 @@ $menu-label-color: $white-ter
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
 
+// swiper
+.link-slide
+  display: block
+  position: absolute
+  left: 0
+  bottom: -100px
+  opacity: 0
+  color: $kaldi-red-invert
+  background-color: gray
+  padding: 12px 30px
+  transition: all 0.5s ease-in-out
+
+.link-slide.active
+  opacity: 1
+  transform: translateY(-100px)
+
+.link-slide h1
+  font-size: 1.5rem
+  font-weight: bold
+  margin-bottom: 8px
+
+.link-slide h2
+  font-size: 1rem
 
 @import "~bulma"
-
 
 // responsiveness
 +tablet-only

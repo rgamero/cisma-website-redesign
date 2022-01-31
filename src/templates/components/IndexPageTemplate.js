@@ -1,6 +1,17 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectFade, Autoplay, Navigation, Pagination } from 'swiper';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/autoplay';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import Features from '../../components/Features';
 import BlogRoll from '../../components/BlogRoll';
 
@@ -12,8 +23,50 @@ const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
+  carouselLinks,
 }) => (
   <div>
+    <Swiper
+      className="articles-carousel"
+      modules={[EffectFade, Navigation, Pagination, Autoplay]}
+      spaceBetween={30}
+      effect="fade"
+      navigation
+      pagination={{
+        clickable: true,
+      }}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: true,
+      }}
+    >
+      {carouselLinks.map((item) => (
+        <SwiperSlide key={item.title}>
+          {({ isActive }) => (
+            <div
+              className="full-width-image margin-top-0"
+              style={{
+                backgroundImage: `url(${
+                  !!item.image.childImageSharp
+                    ? item.image.childImageSharp.gatsbyImageData.images.fallback
+                        .src
+                    : item.image
+                })`,
+                backgroundPosition: `center`,
+              }}
+            >
+              <a
+                className={`link-slide ${isActive ? 'active' : null}`}
+                href={item.url}
+              >
+                <h1>{item.title}</h1>
+                <h2>{item.subtitle}</h2>
+              </a>
+            </div>
+          )}
+        </SwiperSlide>
+      ))}
+    </Swiper>
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -124,6 +177,7 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }).isRequired,
+  carouselLinks: PropTypes.array.isRequired,
 };
 
 export default IndexPageTemplate;

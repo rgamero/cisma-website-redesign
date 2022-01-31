@@ -81,7 +81,7 @@ collections:
     delete: false
     files:
       - file: 'src/content/index.md'
-        label: 'Landing Page'
+        label: 'Página principal'
         name: 'index'
         fields:
           - {
@@ -94,6 +94,35 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
+          - { label: Descripción, name: description, widget: string }
+          - {
+              label: 'Enlaces carrusel',
+              name: 'carousel_links',
+              collapsed: true,
+              widget: 'list',
+              summary: '{{fields.title}}',
+              fields:
+                [
+                  { label: URL, name: url, widget: string },
+                  { label: Image, name: image, widget: image },
+                  {
+                    label: Título,
+                    name: title,
+                    widget: string,
+                    pattern:
+                      ['^.20,80}$', 'No puedes pasarte de 80 caracteres'],
+                    hint: ' Número máximo de caracteres: 80',
+                  },
+                  {
+                    label: Subtítulo,
+                    name: subtitle,
+                    widget: string,
+                    pattern:
+                      ['^.{20,120}$', 'No puedes pasarte de 120 caracteres'],
+                    hint: ' Número máximo de caracteres: 120',
+                  },
+                ],
+            }
           - {
               label: Mainpitch,
               name: mainpitch,
@@ -104,7 +133,6 @@ collections:
                   { label: Description, name: description, widget: text },
                 ],
             }
-          - { label: Description, name: description, widget: string }
           - {
               label: Intro,
               name: intro,
@@ -165,6 +193,53 @@ collections:
                   },
                 ],
             }
+      - file: 'src/content/distribucion/index.md'
+        label: 'Distribución'
+        name: 'distribution'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'distribution-page',
+            }
+          - { label: Título, name: title, widget: string }
+          - { label: Descripción, name: description, widget: string }
+          - {
+              label: 'Distribuidoras',
+              name: 'distributors',
+              collapsed: true,
+              widget: 'list',
+              summary: '{{fields.name}}',
+              fields:
+                [
+                  { label: URL, name: url, widget: string },
+                  { label: Image, name: image, widget: image },
+                  {
+                    label: Nombre,
+                    name: name,
+                    widget: string,
+                    pattern:
+                      ['^.{1,80}$', 'No puedes pasarte de 50 caracteres'],
+                    hint: ' Número máximo de caracteres: 50',
+                  },
+                  {
+                    label: Dirección,
+                    name: address,
+                    widget: string,
+                    pattern:
+                      ['^.{1,120}$', 'No puedes pasarte de 120 caracteres'],
+                    hint: ' Número máximo de caracteres: 120',
+                  },
+                ],
+            }
+          - {
+              label: 'Contenido adicional',
+              name: 'related_content',
+              widget: 'markdown',
+              required: true,
+            }
+
       - file: 'src/content/products/index.md'
         label: 'Products Page'
         name: 'products'

@@ -48,7 +48,7 @@ collections:
 
   - name: 'books'
     label: 'Libros'
-    folder: 'src/content/books'
+    folder: 'src/content/libros'
     create: true
     slug: '{{title}}'
     fields:

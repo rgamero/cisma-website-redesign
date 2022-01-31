@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { kebabCase } from 'lodash';
-import { Link } from 'gatsby';
 import Content from '../../components/Content';
 
 const DistributionPageTemplate = ({
@@ -23,7 +21,7 @@ const DistributionPageTemplate = ({
           {distributors.map((item) => (
             <div key={item.name} className="distributor-item">
               <h1>{item.name}</h1>
-              <h2>{item.url}</h2>
+              <h2>{item.address}</h2>
             </div>
           ))}
           {relatedContent && (

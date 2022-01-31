@@ -7,6 +7,7 @@ import Layout from '../components/Layout';
 import { HTMLContent } from '../components/Content';
 
 const BlogPost = ({ data }) => {
+  const { siteMetadata } = data.site;
   const { mdx: post } = data;
 
   return (
@@ -16,7 +17,7 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate={`%s | ${siteMetadata.title}`}>
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
@@ -42,6 +43,11 @@ export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     mdx(id: { eq: $id }) {
       id
       body

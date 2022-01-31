@@ -6,13 +6,14 @@ import DistributionPageTemplate from './components/DistributionPageTemplate';
 import Layout from '../components/Layout';
 
 const DistributionPage = ({ data }) => {
+  const { siteMetadata } = data.site;
   const { frontmatter } = data.mdx;
 
   return (
     <Layout>
       <DistributionPageTemplate
         helmet={
-          <Helmet titleTemplate="%s | Distribución">
+          <Helmet titleTemplate={`%s | ${siteMetadata.title}`}>
             <title>{`${frontmatter.title}`}</title>
             <meta name="description" content={`${frontmatter.description}`} />
           </Helmet>
@@ -37,6 +38,11 @@ export default DistributionPage;
 
 export const pageQuery = graphql`
   query DistributionPageTemplate {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     mdx(frontmatter: { templateKey: { eq: "distribution-page" } }) {
       frontmatter {
         title

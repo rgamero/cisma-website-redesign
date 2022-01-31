@@ -12,6 +12,9 @@ weight: 230 gr.
 isbn: 978-84-945635-0-8
 edition: 1ª ed. mayo 2016
 price: "PVP: 10 €"
+video_title: Presentación de «La ciudad negocio. Turismo y movilización social
+  en pugna» de China C. Cabrerizo
+video_url: https://www.youtube.com/watch?v=-bRh0Kaxi14
 related_content: >-
   https://soundcloud.com/traficantesdesue-os/la-ciudad-negocio-turismo-y-movilizacion-social-en-pugna
 

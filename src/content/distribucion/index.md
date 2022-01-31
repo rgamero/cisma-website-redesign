@@ -15,6 +15,14 @@ distributors:
     url: https://www.viruseditorial.net/
     name: "Virus "
     address: "C⁄ Junta de Comerç, 18 bajos 08001 Barcelona. Tlf: 93 441 38 14"
+  - url: https://www.localcambalache.org/
+    image: https://www.localcambalache.org/wp-content/themes/cambalache/inc/logo.png
+    name: Local Cambalache
+    address: C/ Martínez Vigil, 30, 33010, Oviedo. Tlf. 985202292
+  - image: https://www.katakrak.net/sites/all/themes/kapital/images/katakrak-logo-h.svg
+    url: https://www.katakrak.net/
+    name: Katakrak
+    address: C/ Mayor, 54, 31001, Pamplona-Iruñea. Tlf. 948225520
 related_content: >-
   ## Envíos por correo
 

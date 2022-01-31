@@ -18,6 +18,7 @@ const DistributionPage = ({ data }) => {
             <meta name="description" content={`${frontmatter.description}`} />
           </Helmet>
         }
+        title={frontmatter.title}
         description={frontmatter.description}
         distributors={frontmatter.distributors}
         relatedContent={frontmatter.related_content}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const YouTubeVideo = ({ videoSrcURL, videoTitle }) => {
+const YouTubeVideo = ({ videoURL, videoTitle }) => {
   const getVideoID = (url) => {
     const regExp =
       /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
@@ -11,7 +11,7 @@ const YouTubeVideo = ({ videoSrcURL, videoTitle }) => {
   return (
     <div className="video">
       <iframe
-        src={`https://www.youtube.com/embed/${getVideoID(videoSrcURL)}`}
+        src={`https://www.youtube.com/embed/${getVideoID(videoURL)}`}
         width="560"
         height="315"
         title={videoTitle}

@@ -17,7 +17,7 @@ const BookItemTemplate = ({
   price,
   edition,
   relatedContent,
-  videoSrcURL,
+  videoURL,
   videoTitle,
 }) => {
   const PageContent = contentComponent || Content;
@@ -39,7 +39,9 @@ const BookItemTemplate = ({
             <p>{isbn}</p>
             <p>{price}</p>
             <p>{edition}</p>
-            <YouTubeVideo videoSrcURL={videoSrcURL} videoTitle={videoTitle} />
+            {videoURL && (
+              <YouTubeVideo videoURL={videoURL} videoTitle={videoTitle} />
+            )}
             {relatedContent && (
               <Content
                 content={relatedContent}
@@ -54,10 +56,10 @@ const BookItemTemplate = ({
 };
 
 BookItemTemplate.defaultProps = {
-  isbn: undefined,
+  isbn: '',
   relatedContent: undefined,
-  videoSrcURL: undefined,
-  videoTitle: undefined,
+  videoURL: undefined,
+  videoTitle: '',
 };
 
 BookItemTemplate.propTypes = {
@@ -74,7 +76,7 @@ BookItemTemplate.propTypes = {
   price: PropTypes.string.isRequired,
   edition: PropTypes.string.isRequired,
   relatedContent: PropTypes.node,
-  videoSrcURL: PropTypes.string,
+  videoURL: PropTypes.string,
   videoTitle: PropTypes.string,
 };
 

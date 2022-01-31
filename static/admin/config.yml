@@ -70,6 +70,18 @@ collections:
       - { label: 'Edición', name: 'edition', widget: 'string' }
       - { label: 'Precio', name: 'price', widget: 'string' }
       - {
+          label: 'Título Video YouTube',
+          name: 'video_title',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Enlace Video YouTube',
+          name: 'video_url',
+          widget: 'string',
+          required: false,
+        }
+      - {
           label: 'Contenido relativo',
           name: 'related_content',
           widget: 'markdown',

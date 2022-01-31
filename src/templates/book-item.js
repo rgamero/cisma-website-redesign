@@ -31,6 +31,8 @@ const BookItem = ({ data }) => {
         isbn={book.frontmatter.isbn}
         price={book.frontmatter.price}
         edition={book.frontmatter.edition}
+        videoTitle={book.frontmatter.video_title}
+        videoURL={book.frontmatter.video_url}
         relatedContent={book.frontmatter.related_content}
       />
     </Layout>
@@ -63,6 +65,8 @@ export const bookItemQuery = graphql`
         isbn
         price
         edition
+        video_title
+        video_url
         related_content
       }
     }
